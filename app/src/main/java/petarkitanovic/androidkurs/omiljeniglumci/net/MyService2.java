@@ -5,20 +5,17 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MyService2 {
 
-    public static Retrofit getRetrofitInstance() {
+    private static Retrofit getRetrofitInstance() {
 
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(MyServiceContract.BASE_URL2)
+        return new Retrofit.Builder()
+                .baseUrl(MyServiceContract.OMDB_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-
-        return retrofit;
     }
 
     public static MyApiEndpointInterface apiInterface() {
-        MyApiEndpointInterface apiService = getRetrofitInstance().create(MyApiEndpointInterface.class);
 
-        return apiService;
+        return getRetrofitInstance().create(MyApiEndpointInterface.class);
     }
 }
 

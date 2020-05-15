@@ -50,8 +50,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static petarkitanovic.androidkurs.omiljeniglumci.net.MyServiceContract.APIKEY;
-import static petarkitanovic.androidkurs.omiljeniglumci.net.MyServiceContract.APIKEY2;
+import static petarkitanovic.androidkurs.omiljeniglumci.net.MyServiceContract.TMDB_APIKEY;
+import static petarkitanovic.androidkurs.omiljeniglumci.net.MyServiceContract.OMDB_APIKEY;
 import static petarkitanovic.androidkurs.omiljeniglumci.net.MyServiceContract.IMAGEBASEURL;
 
 public class DetaljiFilma extends AppCompatActivity {
@@ -273,7 +273,7 @@ public class DetaljiFilma extends AppCompatActivity {
 
     private void getMovieData(final String imbd_id) {
         HashMap<String, String> queryParams = new HashMap<>();
-        queryParams.put("apikey", APIKEY2);
+        queryParams.put("apikey", OMDB_APIKEY);
         queryParams.put("i", imbd_id);
 
         MyService2.apiInterface().getMovieData(queryParams)
@@ -311,7 +311,7 @@ public class DetaljiFilma extends AppCompatActivity {
 
 
     private void getAllMoviesData(int id) {
-        MyService.apiInterface().getAllMoviesData(id, APIKEY, "credits,images,videos", "en,null")
+        MyService.apiInterface().getAllMoviesData(id, TMDB_APIKEY, "credits,images,videos", "en,null")
                 .enqueue(new Callback<MovieDetails>() {
                     @SuppressLint("SetTextI18n")
                     @Override

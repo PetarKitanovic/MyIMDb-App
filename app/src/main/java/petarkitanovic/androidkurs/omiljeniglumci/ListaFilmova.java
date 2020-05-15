@@ -23,7 +23,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static petarkitanovic.androidkurs.omiljeniglumci.net.MyServiceContract.APIKEY;
+import static petarkitanovic.androidkurs.omiljeniglumci.net.MyServiceContract.TMDB_APIKEY;
 
 public class ListaFilmova extends AppCompatActivity {
 
@@ -103,7 +103,7 @@ public class ListaFilmova extends AppCompatActivity {
     }
 
     private void getGlumacFilmovi(int id) {
-        MyService.apiInterface().getActorMovies(id, APIKEY)
+        MyService.apiInterface().getActorMovies(id, TMDB_APIKEY)
                 .enqueue(new Callback<CastResult>() {
                     @Override
                     public void onResponse(@NonNull Call<CastResult> call, @NonNull Response<CastResult> response) {

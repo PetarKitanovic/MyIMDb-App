@@ -27,7 +27,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static petarkitanovic.androidkurs.omiljeniglumci.net.MyServiceContract.APIKEY;
+import static petarkitanovic.androidkurs.omiljeniglumci.net.MyServiceContract.TMDB_APIKEY;
 
 public class MainActivity extends AppCompatActivity implements AdapterSearch.OnItemClickListener, AdapterFilmovi.OnItemClickListener {
 
@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity implements AdapterSearch.OnI
     }
 
     private void getPopularMovies() {
-        MyService.apiInterface().getPopularMovies(APIKEY, "GB")
+        MyService.apiInterface().getPopularMovies(TMDB_APIKEY, "GB")
                 .enqueue(new Callback<MoviesResponse>() {
                     @Override
                     public void onResponse(@NonNull Call<MoviesResponse> call, @NonNull Response<MoviesResponse> response) {
@@ -178,7 +178,7 @@ public class MainActivity extends AppCompatActivity implements AdapterSearch.OnI
     }
 
     private void getTopRatedMovies() {
-        MyService.apiInterface().getTopRatedMovies(APIKEY, "GB")
+        MyService.apiInterface().getTopRatedMovies(TMDB_APIKEY, "GB")
                 .enqueue(new Callback<MoviesResponse>() {
                     @Override
                     public void onResponse(@NonNull Call<MoviesResponse> call, @NonNull Response<MoviesResponse> response) {
@@ -220,7 +220,7 @@ public class MainActivity extends AppCompatActivity implements AdapterSearch.OnI
     }
 
     private void getUpcomingMovies() {
-        MyService.apiInterface().getUpcomingMovies(APIKEY, "US")
+        MyService.apiInterface().getUpcomingMovies(TMDB_APIKEY, "US")
                 .enqueue(new Callback<MoviesResponse>() {
                     @Override
                     public void onResponse(@NonNull Call<MoviesResponse> call, @NonNull Response<MoviesResponse> response) {
@@ -263,7 +263,7 @@ public class MainActivity extends AppCompatActivity implements AdapterSearch.OnI
     }
 
     private void searchMovieByName(String query) {
-        MyService.apiInterface().searchForMovies(query, APIKEY)
+        MyService.apiInterface().searchForMovies(query, TMDB_APIKEY)
                 .enqueue(new Callback<MoviesResponse>() {
                     @Override
                     public void onResponse(@NonNull Call<MoviesResponse> call, @NonNull Response<MoviesResponse> response) {

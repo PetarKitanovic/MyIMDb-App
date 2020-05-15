@@ -31,7 +31,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static petarkitanovic.androidkurs.omiljeniglumci.net.MyServiceContract.APIKEY;
+import static petarkitanovic.androidkurs.omiljeniglumci.net.MyServiceContract.TMDB_APIKEY;
 import static petarkitanovic.androidkurs.omiljeniglumci.net.MyServiceContract.IMAGEBASEURL;
 
 public class GlumciDetails extends AppCompatActivity {
@@ -127,7 +127,7 @@ public class GlumciDetails extends AppCompatActivity {
     }
 
     private void getAllActorsData(int id) {
-        MyService.apiInterface().getAllActorsData(id, APIKEY, "movie_credits")
+        MyService.apiInterface().getAllActorsData(id, TMDB_APIKEY, "movie_credits")
                 .enqueue(new Callback<ActorData>() {
                     @SuppressLint("SetTextI18n")
                     @Override

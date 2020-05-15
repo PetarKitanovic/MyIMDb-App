@@ -24,7 +24,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static petarkitanovic.androidkurs.omiljeniglumci.net.MyServiceContract.APIKEY;
+import static petarkitanovic.androidkurs.omiljeniglumci.net.MyServiceContract.TMDB_APIKEY;
 
 public class ListaGlumaca extends AppCompatActivity {
 
@@ -90,7 +90,7 @@ public class ListaGlumaca extends AppCompatActivity {
 
 
     private void getMovieCast(int id) {
-        MyService.apiInterface().getMoviesCast(id, APIKEY)
+        MyService.apiInterface().getMoviesCast(id, TMDB_APIKEY)
                 .enqueue(new Callback<MovieCrewResponse>() {
                     @Override
                     public void onResponse(@NonNull Call<MovieCrewResponse> call, @NonNull Response<MovieCrewResponse> response) {
