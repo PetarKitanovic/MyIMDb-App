@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">MyIMDb</string>
+    <string name="popular_movies">Popular Movies</string>
+    <string name="top_rated_movies">Top Rated Movies</string>
+    <string name="upcoming_movies">Upcoming Movies</string>
+    <string name="slika_filma">slikaFilma</string>
+    <string name="zvezdica">zvezdica</string>
+    <string name="_10">/10</string>
+    <string name="add_to_watchlist">+ Add to Watchlist</string>
+    <string name="remove_from_watchlist">- Remove from Watchlist</string>
+    <string name="top_cast">Top Cast</string>
+    <string name="see_all">SEE ALL</string>
+    <string name="director">Director</string>
+    <string name="writers">Writers</string>
+    <string name="trailers">Trailers</string>
+    <string name="slika_glumca">slika_glumca</string>
+    <string name="movies">Movies</string>
+    <string name="watchlist_is_empty">Watchlist is empty!</string>
+    <string name="slide_slika">slide slika</string>
+    <string name="gradient_prelaz">gradient prelaz</string>
+    <string name="splash_slika">splash slika</string>
+    <string name="play_btn_img">play btn img</string>
+    <string name="watchlist">Watchlist</string>
+    <string name="search">Search</string>
+
+</resources>

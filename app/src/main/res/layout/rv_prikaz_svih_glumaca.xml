@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/svi_glumci_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/touch_feedback"
+    android:orientation="horizontal">
+
+
+    <ImageView
+        android:id="@+id/slika_glumca"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_margin="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/glava_silueta"
+        android:contentDescription="@string/slika_glumca" />
+
+
+    <TextView
+        android:id="@+id/ime_glumca"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/slika_glumca"
+        app:layout_constraintTop_toTopOf="@+id/slika_glumca"
+        tools:text="Ime Glumca" />
+
+    <TextView
+        android:id="@+id/ime_uloge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        tools:text="Ime Uloge"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/slika_glumca"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/slika_glumca"
+        app:layout_constraintTop_toBottomOf="@+id/ime_glumca" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="SearchResult" parent="">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textColorHint">@color/colorWhite</item>
+        <item name="android:editTextColor" tools:ignore="DuplicateDefinition">@color/colorWhite</item>
+
+    </style>
+</resources>

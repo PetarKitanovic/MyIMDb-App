@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="120dp"
+    android:layout_height="280dp"
+    android:layout_marginStart="3dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginEnd="3dp"
+    android:layout_marginBottom="6dp"
+    android:background="@color/cardview_dark_background"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="1dp"
+    app:elevation="1dp"
+    android:id="@+id/glavni_cardview"
+    tools:ignore="PrivateResource">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/touch_feedback3">
+
+        <ImageView
+            android:id="@+id/iv_slika_filma"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_face_white_24dp"
+            android:contentDescription="@string/slika_filma" />
+
+
+        <TextView
+            android:id="@+id/tv_naziv_filma"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="6dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAlignment="viewStart"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_godina_filma"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_slika_filma"
+            tools:text="The Godfather"
+            tools:ignore="PrivateResource" />
+
+        <TextView
+            android:id="@+id/tv_godina_filma"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="6dp"
+            android:ellipsize="end"
+            android:foregroundGravity="bottom"
+            android:maxLines="2"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorDark"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="2020" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

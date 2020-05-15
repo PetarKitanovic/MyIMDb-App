@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/search"
+        android:inputType="text"
+        android:queryHint="Unesite ime filma"
+        android:icon="@android:drawable/ic_menu_search"
+        android:theme="@style/SearchResult"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom"
+        android:title="@string/search"/>
+
+    <item
+        android:id="@+id/action_whishlist"
+        android:orderInCategory="100"
+        android:title="@string/watchlist"
+        app:showAsAction="never" />
+
+</menu>
