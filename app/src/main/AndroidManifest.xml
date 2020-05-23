@@ -17,24 +17,40 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".DetaljiFilma" />
-        <activity android:name=".ListaGlumaca" />
-        <activity android:name=".GlumciDetails" />
-        <activity android:name=".ListaFilmova" />
-        <activity android:name=".Biografija" />
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".DetaljiFilma"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ListaGlumaca"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".GlumciDetails"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ListaFilmova"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Biografija"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".FullVideo"
             android:screenOrientation="landscape" />
-        <activity android:name=".PlotFilma" />
-        <activity android:name=".OmiljeniFilmovi" />
-        <activity android:name=".SplashScreen">
+        <activity android:name=".PlotFilma"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".OmiljeniFilmovi"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SplashScreen"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".FullSlika"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

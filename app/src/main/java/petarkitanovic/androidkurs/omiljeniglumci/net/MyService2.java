@@ -11,6 +11,7 @@ public class MyService2 {
                 .baseUrl(MyServiceContract.OMDB_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
+
     }
 
     public static MyApiEndpointInterface apiInterface() {

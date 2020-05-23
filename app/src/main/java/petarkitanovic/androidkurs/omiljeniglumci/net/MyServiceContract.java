@@ -8,5 +8,6 @@ public class MyServiceContract {
     public static String OMDB_APIKEY = "fd705d15";
 
     public static String IMAGEBASEURL = "https://image.tmdb.org/t/p/w500";
+    public static String FULLIMAGEURL = "https://image.tmdb.org/t/p/w1280";
 //    public static String TMDB_APIKEY ="19cc511b297f733789a2a3bf0bc6a3b3";
 }

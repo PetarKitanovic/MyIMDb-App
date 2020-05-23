@@ -310,7 +310,7 @@ public class DetaljiFilma extends AppCompatActivity {
     }
 
 
-    private void getAllMoviesData(int id) {
+    private void getAllMoviesData(final int id) {
         MyService.apiInterface().getAllMoviesData(id, TMDB_APIKEY, "credits,images,videos", "en,null")
                 .enqueue(new Callback<MovieDetails>() {
                     @SuppressLint("SetTextI18n")
@@ -372,6 +372,22 @@ public class DetaljiFilma extends AppCompatActivity {
                                     Glide.with(DetaljiFilma.this)
                                             .load(IMAGEBASEURL + movieDetails.getPosterPath())
                                             .into(slikaFilma);
+
+                                    slikaFilma.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            if (SystemClock.elapsedRealtime() - lastClickTime >= 1000) {
+                                                lastClickTime = SystemClock.elapsedRealtime();
+
+                                                Intent intent = new Intent(DetaljiFilma.this,FullSlika.class);
+                                                intent.putExtra("slika",movieDetails.getPosterPath());
+                                                startActivity(intent);
+                                            }
+
+                                        }
+                                    });
+
+
                                 }
 
 

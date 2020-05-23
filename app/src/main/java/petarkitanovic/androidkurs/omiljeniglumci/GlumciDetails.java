@@ -180,6 +180,19 @@ public class GlumciDetails extends AppCompatActivity {
                                 Glide.with(GlumciDetails.this)
                                         .load(IMAGEBASEURL + actorDetails.getProfilePath())
                                         .into(slikaGlumca);
+                                slikaGlumca.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        if (SystemClock.elapsedRealtime() - lastClickTime >= 1000) {
+                                            lastClickTime = SystemClock.elapsedRealtime();
+
+                                            Intent intent = new Intent(GlumciDetails.this,FullSlika.class);
+                                            intent.putExtra("slika",actorDetails.getProfilePath());
+                                            startActivity(intent);
+                                        }
+
+                                    }
+                                });
                             }
 
                             actorCast = actorDetails.getMovieCredits().getCast();
