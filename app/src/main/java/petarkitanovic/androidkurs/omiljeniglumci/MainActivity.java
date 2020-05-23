@@ -1,7 +1,10 @@
 package petarkitanovic.androidkurs.omiljeniglumci;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -45,13 +48,34 @@ public class MainActivity extends AppCompatActivity implements AdapterSearch.OnI
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
+        setContentView(R.layout.activity_main);
         initViews();
 
-        getPopularMovies();
-        getTopRatedMovies();
-        getUpcomingMovies();
+
+        int status = ReviewerTools.getConnectivityStatus(getApplicationContext());
+        if (status == 0) {
+
+            AlertDialog dialogDelete = new AlertDialog.Builder(this)
+                    .setTitle(Html.fromHtml("<font color='#FF0000'>Device Offline</font>"))
+                    .setMessage("It looks like you're offline. Chech your connection.")
+                    .setPositiveButton("CLOSE APP", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                            finish();
+                        }
+                    })
+                    .show();
+            dialogDelete.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getResources().getColor(R.color.colorBlack));
+            dialogDelete.setCanceledOnTouchOutside(false);
+
+        } else {
+
+            getPopularMovies();
+            getTopRatedMovies();
+            getUpcomingMovies();
+        }
 
     }
 
